@@ -1,11 +1,31 @@
 
-const livello = document.getElementById(`difficoltà`);
+let livello = document.getElementById(`difficoltà`);
 const button = document.getElementById (`invio`);
 const griglia = document.getElementById (`griglia`);
+let valoreLivello = livello.value;
+let nodeFacile;
+let nodeMedio;
+let nodeDifficile;
 
 
-button.addEventListener(`click`,
-// L’utente indica un livello di difficoltà 
+button.addEventListener(`click`,{
+  
+    // L’utente indica un livello di difficoltà 
+    if (valoreLivello = `1`) {
+        
+        for(let i = 0; i < 100; i++){
+            const livFacile = livellobase ();
+
+            griglia.append(livFacile);
+            
+        }
+
+        
+    }
+
+}
+
+
 )
 
 function livellobase () {
@@ -14,6 +34,9 @@ function livellobase () {
     return nodeFacile;
 
 }
+
+console.log(nodeFacile);
+
 
 function livelloMedio () {
     let nodeMedio= document.createElement ("div");
