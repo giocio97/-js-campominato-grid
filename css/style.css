@@ -27,15 +27,21 @@ h1, #scelta{
 flex-basis: calc(100% / 10);
 height: calc(100% / 10);
 
+/* debbug */
+background-color: aqua;
+
 }
 
 .square-medio{
     flex-basis: calc(100% / 9);
     height: calc(100% / 9);
+    /* debbug */
+background-color: rgb(255, 255, 0);
 }
 
 .square-difficile{
     flex-basis: calc(100% / 7);
     height: calc(100% / 7);
+    background-color: rgb(255, 119, 0);
 }
 
