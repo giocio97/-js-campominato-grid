@@ -8,15 +8,36 @@ let nodeMedio;
 let nodeDifficile;
 
 
-button.addEventListener(`click`,{
-  
+button.addEventListener(`click`, {
+  let valoreLivello;
     // L’utente indica un livello di difficoltà 
-    if (valoreLivello = `1`) {
+    if (valoreLivello = "facile") {
         
         for(let i = 0; i < 100; i++){
             const livFacile = livellobase ();
 
             griglia.append(livFacile);
+            
+        }
+
+        
+    }
+      else if (valoreLivello = "medio") {
+        
+        for(let i = 0; i < 81; i++){
+            const livMedio = livelloMedio  ();
+
+            griglia.append(livMedio);
+            
+        }
+
+        
+    }  else  {
+        
+        for(let i = 0; i < 49; i++){
+            const livDifficile = livelloDifficile  ();
+
+            griglia.append(livDifficile);
             
         }
 
