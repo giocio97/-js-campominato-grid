@@ -3,46 +3,52 @@ let livello = document.getElementById(`difficoltà`);
 const button = document.getElementById (`invio`);
 const griglia = document.getElementById (`griglia`);
 let valoreLivello = livello.value;
+console.log(valoreLivello);
 let nodeFacile;
 let nodeMedio;
 let nodeDifficile;
 
 
-button.addEventListener(`click`, {
-  let valoreLivello;
-    // L’utente indica un livello di difficoltà 
-    if (valoreLivello = "facile") {
+
+
         
+
+
+               
+button.addEventListener(`click`, {
+  
+//     // L’utente indica un livello di difficoltà 
+function ( ) {
+       if (valoreLivello = "1") {
         for(let i = 0; i < 100; i++){
             const livFacile = livellobase ();
-
+        
             griglia.append(livFacile);
+            // console.log(livFacile);
             
         }
-
-        
-    }
-      else if (valoreLivello = "medio") {
-        
+   
+    }else if (valoreLivello = "2") {
         for(let i = 0; i < 81; i++){
             const livMedio = livelloMedio  ();
-
             griglia.append(livMedio);
+
+           
             
         }
-
-        
-    }  else  {
-        
-        for(let i = 0; i < 49; i++){
-            const livDifficile = livelloDifficile  ();
-
-            griglia.append(livDifficile);
-            
+    
+        } else {
+            for(let i = 0; i < 49; i++){
+                const livDifficile = livelloDifficile  ();
+    
+                griglia.append(livDifficile);
+                
+            }
         }
-
-        
-    }
+    
+        return;
+}
+   
 
 }
 
