@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, #scelta{
+    text-align: center;
+}
+
+#scelta{
+    padding: 10px;
+}
+
+#griglia{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.square{
+    border: solid 1px black;
+}
+
+.square-facile{
+flex-basis: calc(100% / 10);
+height: calc(100% / 10);
+
+}
+
+.square-medio{
+    flex-basis: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.square-difficile{
+    flex-basis: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
