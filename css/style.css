@@ -23,12 +23,16 @@ h1, #scelta{
     border: solid 1px black;
 }
 
+.square.clicked{
+    background-color: rgb(0, 208, 255);
+}
+
 .square-facile{
 flex-basis: calc(100% / 10);
 height: calc(100% / 10);
 
 /* debbug */
-background-color: aqua;
+/* background-color: aqua; */
 
 }
 

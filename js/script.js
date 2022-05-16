@@ -1,60 +1,57 @@
 
-let livello = document.getElementById(`difficoltà`);
-const button = document.getElementById (`invio`);
+let livello = document.getElementById("difficoltà");
+let button = document.getElementById (`invio`);
 const griglia = document.getElementById (`griglia`);
-let valoreLivello = livello.value;
-console.log(valoreLivello);
+console.log(livello, button);
+
+
 let nodeFacile;
 let nodeMedio;
 let nodeDifficile;
 
 
 
-
         
+
+// const myArrRandom = randomNumLivF (100, 1, 100);
+// console.log(myArrRandom);
+
+
+
+for(let i = 0; i < 100; i++){
+    griglia.addEventListener("click",
+    function() {
+        this.classList.add("clicked");
+    }
+    )
+    const livFacile = livellobase ();
+
+    griglia.append(livFacile);
+    // console.log(livFacile);
+    
+}
+
+
+// for(let i = 0; i < 81; i++){
+//     const livMedio = livelloMedio  ();
+//     griglia.append(livMedio);
+
+   
+    
+// }
+
+
+// for(let i = 0; i < 49; i++){
+//     const livDifficile = livelloDifficile  ();
+
+//     griglia.append(livDifficile);
+    
+// }
+
 
 
                
-button.addEventListener(`click`, {
-  
-//     // L’utente indica un livello di difficoltà 
-function ( ) {
-       if (valoreLivello = "1") {
-        for(let i = 0; i < 100; i++){
-            const livFacile = livellobase ();
-        
-            griglia.append(livFacile);
-            // console.log(livFacile);
-            
-        }
-   
-    }else if (valoreLivello = "2") {
-        for(let i = 0; i < 81; i++){
-            const livMedio = livelloMedio  ();
-            griglia.append(livMedio);
-
-           
-            
-        }
-    
-        } else {
-            for(let i = 0; i < 49; i++){
-                const livDifficile = livelloDifficile  ();
-    
-                griglia.append(livDifficile);
-                
-            }
-        }
-    
-        return;
-}
-   
-
-}
-
-
-)
-
+// funzioni
 function livellobase () {
     let nodeFacile = document.createElement ("div");
     nodeFacile.classList.add (`square`, `square-facile`);
@@ -78,6 +75,23 @@ function livelloDifficile () {
     return nodeDifficile;
 
 }
+
+// function randomNumLivF (numItems, min, max){
+//     const arrInt =[];
+//     while ( arrInt.length < numItems) {
+//         let randomNum = getRandomMinMax (min, max);
+//         if (!arrInt.includes (randomNum) ){
+//             arrInt.push(randomNum);
+//         }
+//     }
+// }
+
+// function getRandomMinMax (rangeMin, RangeMax){
+//     let result = Math.floor(Math.random() * (RangeMax - rangeMin));
+//     return result;
+// }
+
+
 
 
 // con difficoltà 1 => tra 1 e 100
