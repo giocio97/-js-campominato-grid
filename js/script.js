@@ -1,7 +1,7 @@
 
 let livello = document.getElementById("difficoltà");
-let button = document.getElementById (`invio`);
-const griglia = document.getElementById (`griglia`);
+let button = document.getElementById ("invio");
+const griglia = document.getElementById ("griglia");
 console.log(livello, button);
 
 
@@ -10,15 +10,21 @@ let nodeMedio;
 let nodeDifficile;
 
 
+button.addEventListener("click",
+() => {
+    const selLiv = livello.value;
+    console.log(selLiv);
 
-        
-
-let myArrRandom = creaRandomNum (100, 1, 100);
-console.log(myArrRandom);
+    griglia.innerHTML = ""; 
 
 
 
-for(let i = 0; i < 100; i++){
+    let myArrRandom = creaRandomNum (100, 1, 100);
+    console.log(myArrRandom);
+
+
+
+for(let i = 0; i < myArrRandom.length; i++){
    
     const livFacile = livellobase ();
     let arrItem = myArrRandom[i];
@@ -38,6 +44,12 @@ for(let i = 0; i < 100; i++){
     // console.log(livFacile);
     
 }
+}
+
+)
+        
+
+
 
 
 // for(let i = 0; i < 81; i++){
