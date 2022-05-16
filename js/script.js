@@ -13,12 +13,12 @@ let nodeDifficile;
 
         
 
-const myArrRandom = creaRandomNum (100, 1, 100);
+let myArrRandom = creaRandomNum (100, 1, 100);
 console.log(myArrRandom);
 
 
 
-for(let i = 0; i < myArrRandom.lenght; i++){
+for(let i = 0; i < 100; i++){
    
     const livFacile = livellobase ();
     let arrItem = myArrRandom[i];
@@ -84,7 +84,7 @@ function livelloDifficile () {
 
 }
 
-function creaRandomNum (numItems, min, max){
+function creaRandomNum (numItems, min, max ){
     const arrInt =[];
     while ( arrInt.length < numItems) {
         let randomNum = getRandomMinMax (min, max);
@@ -96,7 +96,7 @@ function creaRandomNum (numItems, min, max){
 }
 
 function getRandomMinMax (rangeMin, RangeMax){
-    let result = Math.floor(Math.random() * (RangeMax - rangeMin));
+    let result = Math.floor(Math.random() * (RangeMax - rangeMin + 1)) + rangeMin;
     return result;
 }
 
