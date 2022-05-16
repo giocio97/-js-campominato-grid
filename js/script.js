@@ -13,18 +13,26 @@ let nodeDifficile;
 
         
 
-// const myArrRandom = randomNumLivF (100, 1, 100);
-// console.log(myArrRandom);
+const myArrRandom = creaRandomNum (100, 1, 100);
+console.log(myArrRandom);
 
 
 
-for(let i = 0; i < 100; i++){
-    griglia.addEventListener("click",
+for(let i = 0; i < myArrRandom.lenght; i++){
+   
+    const livFacile = livellobase ();
+    let arrItem = myArrRandom[i];
+    
+    livFacile.addEventListener("click",
     function() {
+        
+        this.append(arrItem);
+        
         this.classList.add("clicked");
+
+
     }
     )
-    const livFacile = livellobase ();
 
     griglia.append(livFacile);
     // console.log(livFacile);
@@ -76,20 +84,22 @@ function livelloDifficile () {
 
 }
 
-// function randomNumLivF (numItems, min, max){
-//     const arrInt =[];
-//     while ( arrInt.length < numItems) {
-//         let randomNum = getRandomMinMax (min, max);
-//         if (!arrInt.includes (randomNum) ){
-//             arrInt.push(randomNum);
-//         }
-//     }
-// }
+function creaRandomNum (numItems, min, max){
+    const arrInt =[];
+    while ( arrInt.length < numItems) {
+        let randomNum = getRandomMinMax (min, max);
+        if (!arrInt.includes (randomNum)){
+            arrInt.push(randomNum);
+        }
+    }
+    return arrInt;
+}
 
-// function getRandomMinMax (rangeMin, RangeMax){
-//     let result = Math.floor(Math.random() * (RangeMax - rangeMin));
-//     return result;
-// }
+function getRandomMinMax (rangeMin, RangeMax){
+    let result = Math.floor(Math.random() * (RangeMax - rangeMin));
+    return result;
+}
+
 
 
 

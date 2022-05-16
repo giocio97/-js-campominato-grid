@@ -22,8 +22,7 @@ h1, #scelta{
 .square{
     border: solid 1px black;
 }
-
-.square.clicked{
+.clicked{
     background-color: rgb(0, 208, 255);
 }
 
