@@ -19,9 +19,7 @@ h1, #scelta{
     flex-wrap: wrap;
 }
 
-.square{
-    border: solid 1px black;
-}
+
 .clicked{
     background-color: rgb(0, 208, 255);
 }
@@ -29,6 +27,7 @@ h1, #scelta{
 .square-facile{
 flex-basis: calc(100% / 10);
 height: calc(100% / 10);
+border: solid 1px black;
 
 /* debbug */
 /* background-color: aqua; */
@@ -38,6 +37,7 @@ height: calc(100% / 10);
 .square-medio{
     flex-basis: calc(100% / 9);
     height: calc(100% / 9);
+    border: solid 1px black;
     /* debbug */
 background-color: rgb(255, 255, 0);
 }
@@ -45,6 +45,7 @@ background-color: rgb(255, 255, 0);
 .square-difficile{
     flex-basis: calc(100% / 7);
     height: calc(100% / 7);
+    border: solid 1px black;
     background-color: rgb(255, 119, 0);
 }
 

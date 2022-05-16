@@ -12,21 +12,46 @@ let nodeDifficile;
 
 button.addEventListener("click",
 () => {
-    const selLiv = livello.value;
+
+    let nCelle, classCelle;
+
+    const selLiv = parseInt(livello.value);
     console.log(selLiv);
 
+    // svuota griglia
     griglia.innerHTML = ""; 
 
+    switch (selLiv) {
+       case 1 :
+        default:
+            nCelle = 100;
+            classCelle = "square-facile";
+            break;
+
+            case 2:
+            nCelle = 81;
+            classCelle = "square-medio";
+            break;
+
+            case 3:
+            nCelle = 49;
+            classCelle = "square-difficile";
+            break;
 
 
-    let myArrRandom = creaRandomNum (100, 1, 100);
+
+    }
+
+
+
+    let myArrRandom = creaRandomNum (nCelle, 1, nCelle);
     console.log(myArrRandom);
 
 
 
 for(let i = 0; i < myArrRandom.length; i++){
    
-    const livFacile = livellobase ();
+    const livFacile = livellobase (classCelle);
     let arrItem = myArrRandom[i];
     
     livFacile.addEventListener("click",
@@ -72,29 +97,29 @@ for(let i = 0; i < myArrRandom.length; i++){
 
                
 // funzioni
-function livellobase () {
-    let nodeFacile = document.createElement ("div");
-    nodeFacile.classList.add (`square`, `square-facile`);
-    return nodeFacile;
+function livellobase (classDiv) {
+    let nodeBase = document.createElement ("div");
+    nodeBase.className = classDiv;
+    return nodeBase;
 
 }
 
-console.log(nodeFacile);
 
 
-function livelloMedio () {
-    let nodeMedio= document.createElement ("div");
-    nodeMedio.classList.add (`square`, `square-medio`);
-    return nodeMedio;
 
-}
+// function livelloMedio () {
+//     let nodeMedio= document.createElement ("div");
+//     nodeMedio.classList.add (`square`, `square-medio`);
+//     return nodeMedio;
 
-function livelloDifficile () {
-    let nodeDifficile = document.createElement ("div");
-    nodeDifficile.classList.add (`square`, `square-difficile`);
-    return nodeDifficile;
+// }
 
-}
+// function livelloDifficile () {
+//     let nodeDifficile = document.createElement ("div");
+//     nodeDifficile.classList.add (`square`, `square-difficile`);
+//     return nodeDifficile;
+
+// }
 
 function creaRandomNum (numItems, min, max ){
     const arrInt =[];
